@@ -1,0 +1,138 @@
+/* movieContainer.css */
+
+.search-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .movie-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .movie-box {
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #333; /* Solid gray background */
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 4px solid;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px; /* Shadow effect */
+  }
+  
+  
+  .movie-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .movie-title {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+  
+  .movie-poster {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  
+  .popup-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+  }
+  
+  .popup-content {
+    width: 60%; /* Adjust this value to make the card width a percentage of the screen */
+    min-width: 180px;
+    background: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    max-width: 80%;
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.5);
+    position: relative;
+    animation: swipeDown 0.5s ease-out; /* Add the swipe down animation */
+    border: 4px solid; /* Increase border thickness */
+    box-shadow: 0px 4px 24px; /* Shadow effect */
+  }
+
+  
+  @keyframes swipeDown {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .popup-poster {
+    width: 25%;
+    border-radius: 10px;
+    height: 25%;
+    align-self: center;
+  
+  }
+  
+  .popup-details {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .popup-title {
+    font-size: 3em;
+  }
+  
+  .popup-rating,
+  .popup-overview {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+ 
+  

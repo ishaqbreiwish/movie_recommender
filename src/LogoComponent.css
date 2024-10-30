@@ -1,0 +1,13 @@
+/* src/components/LogoComponent.css */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .logo {
+    width: 450px; /* Set your desired logo width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
